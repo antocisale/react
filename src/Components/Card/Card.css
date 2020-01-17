@@ -1,0 +1,27 @@
+.card{
+    box-shadow: 0 0 5px #666;
+    width: 400px;
+    height: 500px;
+    position:relative;
+
+}
+.card-header{
+    background-size:cover;
+    overflow:hidden;
+    height:200px;
+    width:100%;
+}
+
+.card-img{
+    width:100%;
+}
+
+.rss-link{
+    position:absolute;
+    bottom:5px;
+    left:5px;;
+}
+.rss{
+    width:25px; 
+    height:25px;
+}

@@ -1,26 +1,40 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './1801287.svg';
 import './App.css';
+import Card from './Components/Card/Card.js';
+import HeaderImg from './Components/Card/img.jpg';
 
-function App() {
+const App=() =>{
+  const cards = [
+    {
+      title: "hola",
+      img: logo,
+      },
+    {
+      title: "chau",
+      img: HeaderImg,
+    }
+  ]
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      {cards.map(card =>{
+        return <Card title={card.title} HeaderImg={card.img}></Card>
+      })}
+      
     </div>
   );
 }
 
 export default App;
+
+
+/**OPCION 2:
+ * const imagenes = [HeaderImg,logo];  //Un array con las imagenes que quiero poner, y mapeo en ellos
+ * 
+ * <div>
+      {imagenes.map(img =>{
+        return <Card title="hola" HeaderImg={img}></Card>
+      })}
+      
+    </div>
+ */
