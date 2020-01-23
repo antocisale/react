@@ -16,7 +16,7 @@ const MovieCard = (props) =>{
             </article>
             <footer className ="movie-card-display">
                     <span className="movie-card-display-img-container">
-                        <img className="movie-card-display-img-container-img" src={more}  />
+                        <img className="movie-card-display-img-container-img" src={more} alt="more" />
                     </span>
             </footer>
 

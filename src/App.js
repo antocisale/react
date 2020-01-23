@@ -1,19 +1,16 @@
 import React from 'react';
-import logo from './1801287.svg';
 import './App.css';
-import Card from './Components/Card/Card.js';
-import HeaderImg from './Components/Card/img.jpg';
 import MovieCard from './Components/MovieCard/MovieCard';
 import MovieCardInfo from './Components/MovieCard/MovieCardInfo';
 
 const App=() =>{
   const movieCards= MovieCardInfo;
-
   return (
     <div className="card-container">
       {movieCards.map(card=>{
-        return <MovieCard image={card.image} title={card.title} description={card.description} link={card.link}></MovieCard>
-      })}
+        if(movieCards.indexOf(card)%2==0){
+        return <MovieCard key={card.title} image={card.image} title={card.title} description={card.description} link={card.link}></MovieCard>
+      }})}
     </div>
   );
 }
@@ -26,12 +23,15 @@ export default App;
  * const imagenes = [HeaderImg,logo];  //Un array con las imagenes que quiero poner, y mapeo en ellos
  * 
  * <div>
-      {imagenes.map(img =>{
+      { // primer llave es porque estoy escribiendo en Js//
+        imagenes.map(img =>{
         return <Card title="hola" HeaderImg={img}></Card>
       })}
       
     </div>
  */
+
+ //react quiere reconocer cada elemento, por eso React pide una KEY UNICA - para poder modificar luego únicamente ese elemento
 
 /**
   * OPCION 1: PARA MAPEAR IMAGENES Y DUPLICAR CARDS CAMBIANDO EL CONTENIDO
@@ -54,3 +54,6 @@ export default App;
     </div>
   );
   */
+/**
+ * if(movieCards.indexOf(card)%2==0) (SOLO PARA MOSTRAR LAS CARDS QUE EN EL ARRAY ESTEN UBICADAS EN NUMEROS PARES, O EN NUMEROS IMPARES !==0)
+ */
