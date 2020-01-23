@@ -8,7 +8,7 @@ const App=() =>{
   return (
     <div className="card-container">
       {movieCards.map(card=>{
-        if(movieCards.indexOf(card)%2==0){
+        if(movieCards.indexOf(card)%2===0){
         return <MovieCard key={card.title} image={card.image} title={card.title} description={card.description} link={card.link}></MovieCard>
       }})}
     </div>
@@ -56,4 +56,15 @@ export default App;
   */
 /**
  * if(movieCards.indexOf(card)%2==0) (SOLO PARA MOSTRAR LAS CARDS QUE EN EL ARRAY ESTEN UBICADAS EN NUMEROS PARES, O EN NUMEROS IMPARES !==0)
+ * 
+ * condicional para cambiar fondo segun el tipo de carta (dada en el array):
+ * const getCardColor = cardType => {
+    if(cardType == "Clover" || cardType == "Spade") {
+        return 'black';
+    } else {
+        return 'red';
+    }
+};
+ * 
+ * 
  */
