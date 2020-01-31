@@ -2,15 +2,19 @@ import React from 'react';
 import './App.css';
 import MovieCard from './Components/MovieCard/MovieCard';
 import MovieCardInfo from './Components/MovieCard/MovieCardInfo';
+import Button from './Components/Button/Button';
+import Textarea from './Components/TextArea/Textarea';
+import Inputs from './Components/Input/input';
+import ButtonSuma from './Components/ButtonSuma/ButtonSuma'
+import Login from './Components/Login/Login';
+
 
 const App=() =>{
   const movieCards= MovieCardInfo;
   return (
     <div className="card-container">
-      {movieCards.map(card=>{
-        if(movieCards.indexOf(card)%2===0){
-        return <MovieCard key={card.title} image={card.image} title={card.title} description={card.description} link={card.link}></MovieCard>
-      }})}
+
+      <Login></Login>
     </div>
   );
 }
@@ -19,7 +23,17 @@ export default App;
 
 
 /**OPCION 2:PARA MAPEAR IMAGENES Y DUPLICAR CARDS CAMBIANDO EL CONTENIDO
- * 
+ *       {movieCards.map(card=>{
+        if(movieCards.indexOf(card)%2===0){
+        return <MovieCard key={card.title} image={card.image} title={card.title} description={card.description} link={card.link}></MovieCard>
+      }})}
+      <Button></Button>
+      <Textarea></Textarea>
+      <Inputs></Inputs>
+      <ButtonSuma></ButtonSuma>
+
+
+      
  * const imagenes = [HeaderImg,logo];  //Un array con las imagenes que quiero poner, y mapeo en ellos
  * 
  * <div>

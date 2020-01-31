@@ -1,0 +1,11 @@
+.click-me-button{
+    box-shadow: 0 0 5px #333;
+    height: 50px;
+    width:250px;
+    background-color: greenyellow;
+    border: none;
+}
+
+/* .click-me-button:-moz-window-inactive{
+
+} */
