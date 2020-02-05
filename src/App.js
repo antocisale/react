@@ -7,6 +7,9 @@ import Textarea from './Components/TextArea/Textarea';
 import Inputs from './Components/Input/input';
 import ButtonSuma from './Components/ButtonSuma/ButtonSuma'
 import Login from './Components/Login/Login';
+import ButtonSumaClass from './Components/ButtonSuma/ButtonSumaClass';
+import Inputclass from './Components/Input/inputclass';
+import AxiosUl from './Components/AxiosUl/AxiosUl'
 
 
 const App=() =>{
@@ -14,7 +17,7 @@ const App=() =>{
   return (
     <div className="card-container">
 
-      <Login></Login>
+    <AxiosUl></AxiosUl>
     </div>
   );
 }

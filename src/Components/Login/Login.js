@@ -11,7 +11,7 @@ const Login = () =>{
     const [clave,setClave]= useState("");
     const [correo,setCorreo]=useState("");
     const [errores,setErrores] = useState([]);
-    let clase = "respuesta";
+    const [clase, setClase] = useState("respuesta");
 
     const saveUser = event =>{
         setCorreo(event.target.value)
@@ -22,22 +22,24 @@ const Login = () =>{
     }
 
     const validacion = ()=>{
-        
+        setErrores([])
+        setErrores([...errores,"Acceso permitido"])
+        setErrores([...errores,"Clave Incorrecta"])
         let index = usuario.findIndex(user =>{
             return user.user == correo}
             );
         if (index>-1){
             if (usuario[index].password == clave){
-                clase += " overlay";
+                setClase("respuesta overlay")
                 setAcceso("Acceso permitido")
             }
             else{
-                clase += " overlay";
+                setClase("respuesta overlay")
                 setAcceso("Clave Incorrecta")
             }
         }
         else{
-            clase += " overlay";
+            setClase("respuesta overlay")
             setAcceso("Error en mail")
         };
     }
@@ -49,7 +51,12 @@ const Login = () =>{
             <label>Password
             <input type="password" placeholder="Password" id="clave" onBlur={savePass}></input></label>
             <button type="button" onClick={validacion}>Acceder</button>
-            <span className={clase}>{acceso}</span>
+            {(acceso === "Acceso permitido")?<span className={clase}>{acceso}</span>:""}
+            <ul>
+            {errores.map(er =>{
+                return (<li>er</li>)
+            })}
+            </ul>
         </form>
     )
 }
