@@ -10,14 +10,14 @@ import Login from './Components/Login/Login';
 import ButtonSumaClass from './Components/ButtonSuma/ButtonSumaClass';
 import Inputclass from './Components/Input/inputclass';
 import AxiosUl from './Components/AxiosUl/AxiosUl'
+import UserTable from './Components/AxiosUl/UsersTable';
 
 
 const App=() =>{
   const movieCards= MovieCardInfo;
   return (
     <div className="card-container">
-
-    <AxiosUl></AxiosUl>
+    <UserTable></UserTable>
     </div>
   );
 }
