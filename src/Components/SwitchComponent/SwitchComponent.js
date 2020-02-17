@@ -4,6 +4,8 @@ import Card from '../Card/Card';
 import candies from '../../Images/candies.jpg';
 import coffee from '../../Images/coffee.jpg';
 import vegetables from '../../Images/vegetables.jpg';
+import MovieCard from '../MovieCard/MovieCard';
+import MovieCardInfo from '../MovieCard/MovieCardInfo';
 
 
 const SwitchComponent = () =>{
@@ -17,6 +19,15 @@ const SwitchComponent = () =>{
             </Route>
             <Route path="/card2">
                 <Card HeaderImg={coffee} title="Coffee in the morning: good or bad for our health?"></Card>
+            </Route>
+            <Route path="/movieCard/:id">
+                <MovieCard></MovieCard>
+            </Route>
+            <Route path="/movieCard/:id">
+                <MovieCard></MovieCard>
+            </Route>
+            <Route path="/movieCard/:id">
+                <MovieCard></MovieCard>
             </Route>
         </Switch>
     )
