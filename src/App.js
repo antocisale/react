@@ -11,14 +11,37 @@ import ButtonSumaClass from './Components/ButtonSuma/ButtonSumaClass';
 import Inputclass from './Components/Input/inputclass';
 import AxiosUl from './Components/AxiosUl/AxiosUl'
 import UserTable from './Components/AxiosUl/UsersTable';
+import UsersTableFuncional from './Components/AxiosUl/UsersTableFuncional';
+import useMultiply from './Components/UseMultiply/useMultiply';
 
+
+
+
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faAddressBook} from '@fortawesome/free-solid-svg-icons';
+
+import {
+  BrowserRouter,
+  Switch,
+  Route
+} from 'react-router-dom';
+
+
+import Links from './Components/Links/Links';
+import SwitchComponent from './Components/SwitchComponent/SwitchComponent';
 
 const App=() =>{
   const movieCards= MovieCardInfo;
+  const [
+    multiplier,
+    multiply,
+    incrementMultiplier
+  ] = useMultiply(3);
   return (
-    <div className="card-container">
-    <UserTable></UserTable>
-    </div>
+    <BrowserRouter>
+      <Links></Links>
+      <SwitchComponent></SwitchComponent>
+    </BrowserRouter>
   );
 }
 
@@ -83,5 +106,9 @@ export default App;
     }
 };
  * 
+
+
+ Para agregar iconos:
+ yarn add @fortawesome/fontawesome-svg-core @fortawesome/free-solid-svg-icons @fortawesome/free-regular-svg-icons @fortawesome/react-fontawesome
  * 
  */
